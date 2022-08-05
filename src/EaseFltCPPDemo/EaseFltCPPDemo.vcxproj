@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -30,25 +30,30 @@
     <SccProvider>
     </SccProvider>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -200,14 +205,11 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AESEncryption.cpp" />
-    <ClCompile Include="ControlFilterHandler.cpp" />
+    <ClCompile Include="EncryptionTest.cpp" />
     <ClCompile Include="CPlusPlusDemo.cpp" />
-    <ClCompile Include="ProcessFilterTest.cpp" />
-    <ClCompile Include="RegistryFilterTest.cpp" />
+    <ClCompile Include="FilterControl.cpp" />
     <ClCompile Include="UnitTest.cpp" />
     <ClCompile Include="FilterMessage.cpp" />
-    <ClCompile Include="FilterWorker.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -218,13 +220,15 @@
     <ClCompile Include="WindowsService.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AESEncryption.h" />
-    <ClInclude Include="ControlFilterHandler.h" />
+    <ClInclude Include="EncryptionHandler.h" />
+    <ClInclude Include="FileControlHandler.h" />
+    <ClInclude Include="FilterRule.h" />
+    <ClInclude Include="FileMonitorHandler.h" />
     <ClInclude Include="FilterAPI.h" />
+    <ClInclude Include="FilterControl.h" />
     <ClInclude Include="FilterMessage.h" />
-    <ClInclude Include="FilterWorker.h" />
-    <ClInclude Include="ProcessFilterTest.h" />
-    <ClInclude Include="RegistryFilterTest.h" />
+    <ClInclude Include="ProcessFilterHandler.h" />
+    <ClInclude Include="RegistryFilterHandler.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
